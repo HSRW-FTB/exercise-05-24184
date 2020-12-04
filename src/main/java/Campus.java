@@ -1,1 +1,2 @@
 
+enum Campus {KLE, KL};
