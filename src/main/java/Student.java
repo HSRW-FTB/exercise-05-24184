@@ -2,26 +2,26 @@ import java.util.Date;
 public class Student extends User{
     Domain domain = Domain.STUDENT;
     private static int idGen = 10000;
-    private Course studycourse;
+    private StudyCourse studycourse;
 
     private Student(){
         Integer.toString(idGen);
         idGen++;
     }
-    public Student(String newFirstname, String newLastname){
-        super(Integer.toString(idGen), Domain.STUDENT, newFirstname, newLastname);
+    public Student(String firstname, String lastname){
+        super(Integer.toString(idGen), Domain.STUDENT, firstname, lastname);
         idGen++;
     }
-    public Student(String newFirstname, String newLastname, Date newBirthdate){
-        super(Integer.toString(idGen), Domain.STUDENT, newFirstname, newLastname, newBirthdate);
+    public Student(String firstname, String lastname, Date birthdate){
+        super(Integer.toString(idGen), Domain.STUDENT, firstname, lastname, birthdate);
         idGen++;
     }
 
-    public Course getStudyCourse(){
+    public StudyCourse getStudyCourse(){
         return studycourse;
     }
-    public void setStudyCourse(Course newStudycourse){
-        studycourse = newStudycourse;
+    public void setStudyCourse(StudyCourse studycourse){
+        this.studycourse = studycourse;
     }
 
     public String getStudyCourseDescription(){
@@ -39,14 +39,14 @@ public class Student extends User{
     }
     public void setStudyCourse(String newStdCourse){
         switch (newStdCourse) {
-            case "ME": studycourse = Course.ME; break;
-            case "MSE": studycourse = Course.MSE; break;
-            case "EL": studycourse = Course.EL; break;
-            case "IE": studycourse = Course.IE; break;
-            case "BMS": studycourse = Course.BMS; break;
-            case "SCB": studycourse = Course.SCB; break;
-            case "MME": studycourse = Course.MME; break;
-            case "MBB": studycourse = Course.MBB; break;
+            case "ME": studycourse = StudyCourse.ME; break;
+            case "MSE": studycourse = StudyCourse.MSE; break;
+            case "EL": studycourse = StudyCourse.EL; break;
+            case "IE": studycourse = StudyCourse.IE; break;
+            case "BMS": studycourse = StudyCourse.BMS; break;
+            case "SCB": studycourse = StudyCourse.SCB; break;
+            case "MME": studycourse = StudyCourse.MME; break;
+            case "MBB": studycourse = StudyCourse.MBB; break;
             default:
         }
     }
