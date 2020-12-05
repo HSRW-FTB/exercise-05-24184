@@ -11,39 +11,39 @@ public class RegularPolygon extends GeometricObject {
         x = 0;
         y = 0;
     }
-    public RegularPolygon(int newN, double newSide, double newX, double newY){
-        n = newN;
-        side = newSide;
-        x = newX;
-        y = newY;
+    public RegularPolygon(int n, double side, double x, double y){
+        this.n = n;
+        this.side = side;
+        this.x = x;
+        this.y = y;
     }
 
     public int getN(){
         return n;
     }
-    public void setN(int newN){
-        n = newN;
+    public void setN(int n){
+        this.n = n;
     }
 
     public double getSide(){
         return side;
     }
-    public void setSide(double newSide){
-        side = newSide;
+    public void setSide(double side){
+        this.side = side;
     }
 
     public double getX(){
         return x;
     }
-    public void setX(double newX){
-        x = newX;
+    public void setX(double x){
+        this.x = x;
     }
 
     public double getY(){
         return y;
     }
-    public void setY(double newY){
-        y = newY;
+    public void setY(double y){
+        this.y = y;
     }
 
     public double getPerimeter(){
@@ -55,6 +55,6 @@ public class RegularPolygon extends GeometricObject {
 
     public String toString(){
 
-        return "RegularPolygon: number of sides = " +n + "side length=" + side;
+        return "RegularPolygon: Number of sides = " +n + "side length=" + side;
     }
 }
