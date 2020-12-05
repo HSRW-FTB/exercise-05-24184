@@ -1,7 +1,8 @@
 
 import java.util.Date;
 
-public class Professor {
+public class Professor extends User{
+    Domain domain = Domain.STAFF;
     private Faculty faculty = Faculty.TUB;
     private Campus campus = Campus.KLE;
     private int phone = 0;
@@ -11,10 +12,15 @@ public class Professor {
 
     public Professor (String id, String firstname, String lastname){
 
+        super(id, Domain.STAFF, firstname, lastname);
+
 
     }
 
     public Professor (String id, String firstname, String lastname, Date birthdate){
+
+        super(id, Domain.STAFF, firstname, lastname, birthdate);
+
 
 
 
@@ -75,4 +81,3 @@ public class Professor {
 
 
 }
-
