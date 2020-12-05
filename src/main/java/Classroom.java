@@ -79,6 +79,6 @@ public class Classroom {
 
     public int getTotalPaticipants(){
         
-        return participants.length;
+        return "";
     }
 }
