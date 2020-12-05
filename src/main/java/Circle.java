@@ -1,5 +1,4 @@
-
-public class Circle {
+public class Circle extends GeometricObject {
     double radius = 1;
 
     Circle(){}
