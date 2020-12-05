@@ -7,7 +7,7 @@ public class Triangle extends GeometricObject{
     public Triangle(){}
 
     public Triangle(double side1, double side2, double side3){
-
+        super.getColor();
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -73,4 +73,3 @@ public double getSide3(){
 
 
 }
-
