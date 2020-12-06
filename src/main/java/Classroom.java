@@ -1,8 +1,6 @@
 import java.util.Date;
 import java.util.*;
-
 public class Classroom {
-    
     private String id;
     private Course course;
     private Student[] participants;
@@ -10,22 +8,17 @@ public class Classroom {
     private String term;
 
     private Classroom(){}
-    
-    public Classroom(Course course, String room){
-        
-        this.course = course;
-        this.room = room;
+
+    public Classroom(Course newCourse, String theRoom){
+        course = newCourse;
+        room = theRoom;
     }
-    
-    
-    public Classroom(Course course, String room, Date date){
-        this.course = course;
-        this.room = room;
+    public Classroom(Course newCourse, String theRoom, Date date){
+        course = newCourse;
+        room = theRoom;
     }
-    
 
     public Course getCourse(){
-        
         return course;
     }
     
@@ -33,11 +26,10 @@ public class Classroom {
         return room;
     }
     public void setRoom(String theRoom){
-        this.room = room;
+        room = theRoom;
     }
 
     public String getTerm(){
-        
         Calendar calendar = new GregorianCalendar();
         int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
@@ -55,30 +47,46 @@ public class Classroom {
     }
 
     public String getID(){
-        return id;
+
+        id = this.course.getID();
+        term = this.getTerm();
+        return id + "-" + term;
     }
 
     public void addStudent(Student student){
+
+        participants = new Student[4];
         
-            for (int i = 0; i < 100; i++){
-                participants = new Student[100];
-                participants[i] = student;
-            }
-    
-        }
-    public String getParticipantsEmail(){
-        int i = 0;
-        if (i < participants.length){
-            i++;
-            //String studentid = Arrays.toString(participants);
+        for (int i = 0; i < 4; i++){
             
+            participants[i] = student;
         }
-        return "";
-        
+
     }
+        public String getParticipantsEmail()
+        {
+          
+         // String str = "email";
+          String email = "";
+          String str = ",";
+               
+            
+            for(int i = 0; i<4;i++){
+            
+            
+            email = participants[i].getFQUN();
+            
+          
+                   
+                                                        
+            }
+
+            //return str;
+            return email + str;
+                                                        
+        }
 
     public int getTotalPaticipants(){
-        
-        return 1506990209;
+        return participants.length;
     }
 }
